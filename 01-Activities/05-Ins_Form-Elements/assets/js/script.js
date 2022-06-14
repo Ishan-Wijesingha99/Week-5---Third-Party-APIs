@@ -1,8 +1,11 @@
 var formEl = $('#pizza-form');
+// different way of selecting elements in a form
 var firstNameEl = $('input[name="first-name"]');
 var lastNameEl = $('input[name="last-name"]');
 var emailEl = $('input[name="email"]');
 var githubEl = $('input[name="github"]');
+
+
 
 function handleFormSubmit(event) {
   // Prevent the default behavior
@@ -14,7 +17,7 @@ function handleFormSubmit(event) {
   console.log('GitHub:', githubEl.val());
 
   // Select all checked options
-  var checkedEl = $('input:checked');
+  var checkedEl = $('input:checked'); // get all the inputs whose values is CHECKED
   var selected = [];
 
   // Loop through checked options to store in array
