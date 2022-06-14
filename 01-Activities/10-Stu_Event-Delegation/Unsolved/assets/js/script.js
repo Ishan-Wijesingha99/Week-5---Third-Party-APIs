@@ -28,8 +28,23 @@ function handleFormSubmit(event) {
   $('input[name="shopping-input"]').val('');
 }
 
-// TODO: Create a function to handle removing a list item when `.delete-item-btn` is clicked
 
-// TODO: Use event delegation and add an event listener to `shoppingListEl` to listen for a click event on any element with a class of `.delete-item-btn` and execute the function created above
+
+// THIS CODE IS IMCOMPLETE, IF WE HAVE MULTIPLE LIST ITEMS, WHEN WE PRESS THE DELETE BUTTON FOR ONE OF THEM, ALL THE LIST ITEMS ARE DELETED
+// WE NEED TO ACTUALLY NUMBER EACH LIST ITEM TO DELETE ONE BY ONE
+
+// function for deleting the list item
+const deleteListItem = function(e) {
+  if(e.target === $(".delete-item-btn")[0]) {
+    $(".delete-item-btn").parent('li').remove();
+  }
+}
+
+
+
+
+shoppingListEl.on('click', deleteListItem)
+
+
 
 shoppingFormEl.on('submit', handleFormSubmit);
