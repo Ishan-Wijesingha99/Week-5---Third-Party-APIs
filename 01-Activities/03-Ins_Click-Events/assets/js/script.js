@@ -8,7 +8,7 @@ var refreshButtonEl = $('#refresh-btn');
 var isDark = true;
 
 // Click event causes alert "Hello World"
-// Vanilla JS equivalent: `addEventListener`
+// JS equivalent: `addEventListener`
 alertButtonEl.on('click', function () {
   alert('Hello World');
 });
